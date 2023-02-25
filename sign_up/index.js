@@ -1,0 +1,63 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-analytics.js";
+  import { getAuth, createUserWithEmailAndPassword, signInWithPopup, FacebookAuthProvider } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyAYm6OsGaiE0x8cAAiaX6D_2LLyl7waI64",
+    authDomain: "project-jsi15.firebaseapp.com",
+    projectId: "project-jsi15",
+    storageBucket: "project-jsi15.appspot.com",
+    messagingSenderId: "798475890857",
+    appId: "1:798475890857:web:a4184c9166bf8b3e27b9b8",
+    measurementId: "G-MYWN2RZV0B"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+  const provider = new FacebookAuthProvider();
+
+  document.getElementById('submit').addEventListener('click', (e)=>{
+    var email = document.getElementById('email').value;
+    var password = document.getElementById('password').value;
+    var username = document.getElementById('username').value;
+    const auth = getAuth();
+
+    createUserWithEmailAndPassword(auth, email, password)
+    .then(() => {
+        const user = {
+            username : username,
+            email : email,
+            password : password,
+        }
+        const json = JSON.stringify(user);
+        localStorage.setItem(username, json);
+        alert("Đăng kí thành công. Chào mừng cửa hàng" + ' ' + user.username + ' ' + "đã đến với trang web của chúng tôi");
+
+    })
+    .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+
+        alert("Lỗi rồi nhé: " + errorMessage);
+    });
+});
+
+
+document.getElementById('facebook').addEventListener('click', (e)=>{
+    const auth = getAuth();
+
+    signInWithPopup(auth, provider)
+  .then((result) => {
+    const user = result.user;
+
+    const credential = FacebookAuthProvider.credentialFromResult(result);
+    const accessToken = credential.accessToken;
+
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    const email = error.customData.email;
+    const credential = FacebookAuthProvider.credentialFromError(error);
+  });
+});
