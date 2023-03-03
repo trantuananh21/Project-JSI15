@@ -33,7 +33,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebas
         localStorage.setItem(username, json);
         alert("Đăng kí thành công. Chào mừng cửa hàng" + ' ' + user.username + ' ' + "đã đến với trang web của chúng tôi");
         window.location.href = "http://127.0.0.1:5501/trang_chinh/index.html"
-    })
+      })
     .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;

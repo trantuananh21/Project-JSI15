@@ -4,9 +4,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng nhập - Quản Lý Hoa</title>
+    <title>Đăng Nhập - Quản Lý Hoa</title>
+    <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
-    
+
+    <div class="user">
+        <div class="user_options-container">
+          <div class="user_options-text">
+            <div class="user_options-unregistered">
+              <h2 class="user_unregistered-title">Bạn chưa có tài khoản rồi ư?</h2>
+              <p class="user_unregistered-text"><a class="user_unregistered-a" href="http://127.0.0.1:5501/sign_up/index.html">Ấn vào đây</a> để đi đến trang đăng ký</p>
+            </div>
+          
+          <div class="user_options-forms" id="user_options-forms">
+            <div class="user_forms-login">
+              <h2 class="forms_title">Đăng Ký</h2>
+              <div class="forms_form">
+                <fieldset class="forms_fieldset">
+                    <label for="email"  class="forms_field">
+                        <input type="email" class="forms_field-input" name="email" id="email" placeholder="Email">
+                    </label>
+                    <label for="password"  class="forms_field">
+                        <input type="password" class="forms_field-input" name="password" id="password" placeholder="Mật khẩu">
+                    </label>
+                </fieldset>
+                <div class="forms_buttons">
+                  <button type="button" class="forms_buttons-forgot">Quên mật khẩu?</button>
+                  <button id="submit" class="forms_buttons-action">Xác nhận</button>
+                </div>
+                <div class="forms_buttons">
+                    <button class="forms_buttons-action" id="google">Đăng nhập với Google</button>
+                  </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <script src="./index.js" type="module"></script>
 </body>
 </html>
