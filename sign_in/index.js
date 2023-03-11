@@ -28,7 +28,6 @@ document.getElementById('submit').addEventListener('click', (e)=>{
         })
       .catch((error) => {
           alert(error)
-          const errorMessage = error.message;
       });
 });
 

@@ -12,6 +12,7 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 12px;
   line-height: 1em;
+  background-image: url(./mesh-679.png);
 }
 
 button {
@@ -59,7 +60,6 @@ input::placeholder {
   align-items: center;
   width: 100%;
   height: 100vh;
-  background: #f4f4f4;
   background-size: cover;
 }
 .user_options-container {

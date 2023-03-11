@@ -35,10 +35,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebas
         window.location.href = "http://127.0.0.1:5501/trang_chinh/index.html"
       })
     .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-
-        alert("Lỗi rồi nhé: " + errorMessage);
+      alert(error)
     });
 });
 
