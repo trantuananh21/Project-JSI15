@@ -8,22 +8,17 @@
     <link rel="stylesheet" href="./index.css">
 </head>
 <body>
-    <!-- Header -->
+      <!-- Header -->
     <header class="header">
         <img src="./Logo (attempt 1).png">
     
         <h2 class="Nav-Options" id="Home-Button">Trang chủ</h2>
-        <h2 class="Nav-Options">Tổng quan</h2>
-        <h2 class="Nav-Options">Nhập số liệu</h2>
+        <a class="a-button" href="./nhap-so-lieu.html"><h2 class="Nav-Options">Nhập số liệu</h2></a>
     
-        <h2 class="Acc-Options" id="SignIn-Button">Đăng ký</h2>
-        <h2 class="Acc-Options" id="LogIn-Button">Đăng nhập</h2>
-    
+        <h2 class="Acc-Options" id="SignOut-Button">Đăng xuất</h2>
       </header>
       <!-- End of Header -->
       
-
-
 
 
       <!-- Main -->
@@ -32,22 +27,26 @@
               <div class="box">
                 <p class="text-box">TỔNG SỐ HOA:</p>
                 <p class="number-box" id="overview"></p>
+                <input type="text" id="overview-text">
               </div>
 
               <div class="box">
                 <p class="text-box">LỢI NHUẬN:</p>
                 <p class="number-box" id="total"></p>
+                <input type="text" id="total-text">
+                <div id="innerstring"></div>
+
               </div>
 
               <div class="box">
                 <p class="text-box">SỐ NGƯỜI THAM GIA:</p>
                 <p class="number-box" id="users"></p>
+                <input type="text" id="users-text">
+                <button id="update">Update</button>
               </div>
             </div>
           </main>
           <!-- End of main -->
-    
-
 
 
 
@@ -123,5 +122,7 @@
             
           </footer>
           <!-- End of Footer -->
+
+          <script type="module" src="./index.js"></script>
 </body>
 </html>

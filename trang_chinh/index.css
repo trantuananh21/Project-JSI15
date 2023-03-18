@@ -42,13 +42,13 @@
   }
 
   .Nav-Options:hover{
-    color: #030203;
-    background-color: #ffffff;
+    color: #eb4034;
   }
 
-  #SignIn-Button{
+  #SignOut-Button{
+    float: right;
     margin-top: 0px;
-    margin-left: 35%;
+    margin-left: 58.5%;
     margin-bottom: 0px;
     padding: 15px 30px 15px 30px;
   }
@@ -59,8 +59,7 @@
   }
 
   #Home-Button{
-    color: #030203;
-    background-color: #ffff;
+    color: #eb4034;
   }
     
   #Promotion-Space{
@@ -72,14 +71,17 @@
 
     font-size: 10px;
   }
+  .a-button{
+    text-decoration: none;
+    color: #030203;
+  }
 
   .Acc-Options{
     cursor: pointer;
   }
 
   .Acc-Options:hover{
-    color: #030203;
-    background-color: #ffffff;
+    color: #eb4034;
   }
 /* End of header */
 
@@ -146,7 +148,6 @@
     font-size: 15px;
     font-weight: 400;
   }
-  
   .nav__title {
     font-weight: 400;
     font-size: 15px;
