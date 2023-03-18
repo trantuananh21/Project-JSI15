@@ -37,6 +37,8 @@
     margin-top: 0px;
     margin-bottom: 0px;
     padding: 15px 30px;
+    cursor: pointer;
+    text-decoration: none;
   }
 
   .Nav-Options:hover{
@@ -167,6 +169,12 @@
   .nav__ul--extra {
     column-count: 2;
     column-gap: 1.25em;
+  }
+  .nav__ul a:hover {
+    color: #ffff;
+  }
+  .footer__btn:hover{
+    text-decoration: underline;
   }
   
   @media screen and (min-width: 24.375em) {

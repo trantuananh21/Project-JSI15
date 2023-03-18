@@ -39,6 +39,11 @@
     margin-top: 0px;
     margin-bottom: 0px;
     padding: 15px 30px 15px 30px;
+    cursor: pointer;
+  }
+
+  .Nav-Options a{
+    text-decoration: none;
   }
 
   .Nav-Options:hover{
@@ -50,18 +55,13 @@
     margin-top: 0px;
     margin-left: 58.5%;
     margin-bottom: 0px;
-    padding: 15px 30px 15px 30px;
+    padding: 15px 10px;
+    font-family: 'Pacifico', cursive;
+    font-weight: 400;
+    text-transform: lowercase;
+    font-size: 1.5rem;
   }
 
-  #LogIn-Button{
-    margin-top: 0px;
-    padding: 15px 30px 15px 30px;
-  }
-
-  #Home-Button{
-    color: #eb4034;
-  }
-    
   #Promotion-Space{
     background-color: orange;
     color: white;

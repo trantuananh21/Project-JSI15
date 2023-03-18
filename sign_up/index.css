@@ -13,8 +13,9 @@
     font-size: 12px;
     line-height: 1em;
     background-image: url(./mesh-679.png);
+    background-size: cover;
   }
-  
+
   button {
     background-color: transparent;
     padding: 0;

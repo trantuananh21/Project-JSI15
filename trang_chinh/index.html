@@ -10,12 +10,16 @@
 <body>
       <!-- Header -->
     <header class="header">
+      <a class="a-button" href="http://127.0.0.1:5501/trang_chinh/index.html">
         <img src="./Logo (attempt 1).png">
+      </a>
     
+      <a class="a-button" href="http://127.0.0.1:5501/trang_chinh/index.html">
         <h2 class="Nav-Options" id="Home-Button">Trang chủ</h2>
+      </a>
         <a class="a-button" href="./nhap-so-lieu.html"><h2 class="Nav-Options">Nhập số liệu</h2></a>
     
-        <h2 class="Acc-Options" id="SignOut-Button">Đăng xuất</h2>
+        <a class="Acc-Options" id="SignOut-Button">Đăng xuất</a>
       </header>
       <!-- End of Header -->
       
@@ -26,28 +30,27 @@
             <div class="flex-box">
               <div class="box">
                 <p class="text-box">TỔNG SỐ HOA:</p>
-                <p class="number-box" id="overview"></p>
-                <input type="text" id="overview-text">
+                <div id="innerstring1"></div>
+
               </div>
 
               <div class="box">
                 <p class="text-box">LỢI NHUẬN:</p>
-                <p class="number-box" id="total"></p>
-                <input type="text" id="total-text">
-                <div id="innerstring"></div>
-
+                <div id="innerstring2"></div>
               </div>
 
               <div class="box">
                 <p class="text-box">SỐ NGƯỜI THAM GIA:</p>
-                <p class="number-box" id="users"></p>
-                <input type="text" id="users-text">
-                <button id="update">Update</button>
+                <div id="innerstring3"></div>
               </div>
             </div>
+
+            <input type="text" id="overview-text">
+            <input type="text" id="total-text">
+            <input type="text" id="users-text">
+            <button id="update">Update</button>
           </main>
           <!-- End of main -->
-
 
 
           <!-- Footer -->

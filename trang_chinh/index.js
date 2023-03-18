@@ -15,7 +15,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
-import { doc, addDoc, getFirestore, collection, updateDoc, deleteDoc, getDocs} from "https://www.gstatic.com/firebasejs/9.17.2/firebase-firestore.js"; 
+import { doc, addDoc, getFirestore, collection, updateDoc, getDocs} from "https://www.gstatic.com/firebasejs/9.17.2/firebase-firestore.js"; 
 const db = getFirestore(app)
 
 const update = async() =>{
@@ -23,42 +23,46 @@ const update = async() =>{
     const total = document.getElementById('total-text').value;
     const overview = document.getElementById('overview-text').value;
 
-  await updateDoc(doc(db, 'Overview', 'users'), {
-      number: users,
+  await updateDoc(doc(db, 'Overview', 'overview'), {
+      allUsers: users,
   }) 
-  await updateDoc(doc(db, 'Overview', 'totalSpent'), {
-    total: total,
+  await updateDoc(doc(db, 'Overview', 'overview'), {
+    totalSpent: total,
 })
-await updateDoc(doc(db, 'Overview', 'allFlowers'), {
-    overview: overview,
+await updateDoc(doc(db, 'Overview', 'overview'), {
+    allFlowers: overview,
 })
 }
 document.getElementById('update').addEventListener('click', update);
 
-// // const deleteSouvenir = async() =>{
-// //     await deleteDoc(doc(db, 'souvenir-table', 'ckCCEGSgJbJq7byfwdiy'))
-// // }
-// // deleteSouvenir()
-
 const querySnapshot = await getDocs(collection(db, "Overview"));
-var innerstring = " "
-querySnapshot.forEach((doc) => {
-    innerstring = innerstring + `
-    <div id="users">
-        ${doc.overview}
-        ${doc.data().total}
-        ${doc.data().number}
-    </div>
-    `
-});
-var divclass = document.getElementById('innerstring');
-divclass.innerHTML = innerstring;
-console.log(innerstring);
+var innerstring1 = ''
+var innerstring2 = ''
+var innerstring3 = ''
 
-const auth = getAuth();
-signOut(auth).then(() => {
-    alert('Đăng xuất thành công')
-    window.location.href = 'http://127.0.0.1:5501/Project-JSI15-main(THUPhu)/homepage/index.html'
-}).catch((error) => {
-    console.log(error);
+querySnapshot.forEach((doc) => {
+    innerstring1 = `
+    <p  class="number-box" id="overview">${doc.data().allFlowers}</p>
+    `;
+    innerstring2 = `
+    <p class="number-box" id="total">${doc.data().totalSpent}</p>
+    `;
+    innerstring3 = `
+    <p class="number-box" id="users">${doc.data().allUsers}</p>
+    `;
 });
+document.getElementById('innerstring1').innerHTML = innerstring1;
+document.getElementById('innerstring2').innerHTML = innerstring2;
+document.getElementById('innerstring3').innerHTML = innerstring3;
+
+
+const signout = async() =>{
+    const auth = getAuth();
+    signOut(auth).then(() => {
+        alert('Đăng xuất thành công')
+        window.location.href = 'http://127.0.0.1:5501/Project-JSI15-main(THUPhu)/homepage/index.html'
+    }).catch((error) => {
+        console.log(error);
+    });
+}
+document.getElementById('SignOut-Button').addEventListener('click', signout)
