@@ -121,6 +121,7 @@ input::placeholder {
   overflow: hidden;
   transform: translate3d(100%, -50%, 0);
   transition: transform 0.4s ease-in-out;
+  border-radius: 10%;
 }
 .user_options-forms .user_forms-login {
   transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
