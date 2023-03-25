@@ -1,43 +1,6 @@
-<<<<<<< HEAD
-*, *:before, *:after {
-    box-sizing: border-box;
-  }
-  
-  html {
-    font-size: 100%;
-  }
-  
-  body {
-    font-family: acumin-pro, system-ui, sans-serif;
-    margin: 0;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    font-size: 14px;
-    background-color: #f4f4f4;
-    align-items: start;
-    min-height: 130vh;
-  }
-  .header {
-    display: flex;
-    flex-flow: row wrap;
-    color: #030203;
-    background-color: #ffc5fd;
-    padding: 0px 30px 0px 30px;
-    border-top: 1px solid #e5e5e5;
-  }
-  .header__logo {
-    font-family: 'Pacifico', cursive;
-    font-weight: 400;
-    text-transform: lowercase;
-    font-size: 1.5rem;
-    margin-top: 17.430px;
-    margin-right: 30px;
-  }
-=======
 body {
   margin: 0px 0px 0px 0px;
 }
->>>>>>> c5660ffae1cc704b6f23426383d760e4d142084b
 
 #Nav-bar {
   position: static;
@@ -51,26 +14,6 @@ body {
   background-color: rgb(249, 171, 184);
 }
 
-<<<<<<< HEAD
-  #SignIn-Button{
-    margin-top: 0px;
-    margin-left: 51%;
-    margin-bottom: 0px;
-    padding: 1px 30px;
-  }
-
-  #LogIn-Button{
-    margin-top: 0px;
-    padding: 1px 30px;
-  }
-    
-  #Promotion-Space{
-    background-color: orange;
-    color: white;
-    
-    padding-left: 30px;
-    padding-right: 30px;
-=======
 #Nav-bar .Contents_Right
 {
   display: flex;
@@ -132,7 +75,6 @@ body {
 
 .Main .Background
 {
-
   background-color: rgb(239, 203, 225);
   width: 100%;
 }
@@ -177,17 +119,9 @@ body {
   width: 100px;
   height: 50px;
 }
->>>>>>> c5660ffae1cc704b6f23426383d760e4d142084b
 
 
 
-<<<<<<< HEAD
-  .Acc-Options:hover{
-    color: #eb4034;
-  }
-  
-=======
->>>>>>> c5660ffae1cc704b6f23426383d760e4d142084b
 /* Footer */
 .footer {
   display: flex;
@@ -305,117 +239,57 @@ body {
   .footer__nav {
     flex: 2 0px;
   }
-<<<<<<< HEAD
-  
-  .footer__nav > * {
-    flex: 1 50%;
-    margin-right: 1.25em;
-  }
-  
-  .nav__ul a {
-    color: #999;
-  }
-  
-  .nav__ul--extra {
-    column-count: 2;
-    column-gap: 1.25em;
-  }
-  .nav__ul a:hover {
-    color: #ffff;
-  }
-  .footer__btn:hover{
-    text-decoration: underline;
-  }
-  
-  @media screen and (min-width: 24.375em) {
-    .legal .legal__links {
-      margin-left: auto;
-    }
-  }
-  
-  @media screen and (min-width: 40.375em) {
-    .footer__nav > * {
-      flex: 1;
-    }
-    
-    .nav__item--extra {
-      flex-grow: 2;
-    }
-    
-    .footer__addr {
-      flex: 1 0px;
-    }
-    
-    .footer__nav {
-      flex: 2 0px;
-    }
-  }
+}
 
-
-
-
-
-
-/* Feedback */
 .Main{
-  background-color: #f4f4f4;
+  height: 100vh;
+  background-color: rgb(239, 203, 225);
 }
-  input[type=text], select, textarea {    
-    width: 100%;    
-    padding: 12px;    
-    border: 1px solid rgb(70, 68, 68);    
-    border-radius: 4px;    
-    resize: vertical;    
-  }    
-  input[type=email], select, textarea {    
-    width: 100%;    
-    padding: 12px;    
-    border: 1px solid rgb(70, 68, 68);    
-    border-radius: 4px;    
-    resize: vertical;    
-  }    
-      
-  label {    
-    padding: 12px 12px 12px 0;    
-    display: inline-block;    
-  }    
-      
-  input[type=submit] {    
-    background-color: rgb(37, 116, 161);    
-    color: white;    
-    padding: 12px 20px;    
-    border: none;    
-    border-radius: 4px;    
-    cursor: pointer;    
-    float: right;    
-  }    
-      
-  input[type=submit]:hover {    
-    background-color: #45a049;    
-  }    
-      
-  .container {    
-    border-radius: 5px;    
-    padding: 20px;    
-  }    
-      
-  .col-25 {    
-    float: left;    
-    width: 25%;    
-    margin-top: 6px;    
-  }    
-      
-  .col-75 {    
-    float: left;    
-    width: 75%;    
-    margin-top: 6px;    
-  }  
+input[type=text], select, textarea {    
+  width: 100%;    
+  padding: 12px;    
+  border: 1px solid rgb(70, 68, 68);    
+  border-radius: 4px;    
+  resize: vertical;    
+}    
+input[type=email], select, textarea {    
+  width: 100%;    
+  padding: 12px;    
+  border: 1px solid rgb(70, 68, 68);    
+  border-radius: 4px;    
+  resize: vertical;    
+}    
+   
+label {    
+  padding: 12px 12px 12px 0;    
+  display: inline-block;    
+}    
+
+.container {    
+  border-radius: 5px;    
+  padding: 20px;    
+}    
+    
+.col-25 {    
+  float: left;    
+  width: 25%;    
+  margin-top: 6px;    
+}    
+    
+.col-75 {    
+  width: 100%;    
+  margin-top: 6px;    
+}    
+    
+/* Clear floats after the columns */    
+.row:after {    
+  content: "";    
+  display: table;    
+  clear: both;    
+} 
+
 #submit{
-  margin-left: 93.5%;
-  }
-#submit:hover{
-  color: #eb4034;
-    }
-=======
+  text-decoration: none;
+  color: black;
+  
 }
->>>>>>> c5660ffae1cc704b6f23426383d760e4d142084b
