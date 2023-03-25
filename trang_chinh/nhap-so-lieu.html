@@ -10,33 +10,43 @@
 <body>
           <!-- Header -->
           <header class="header">
-            <a class="a-button" href="http://127.0.0.1:5501/trang_chinh/index.html">
+            <a class="a-button" href="http://127.0.0.1:5501/Project-JSI15-main(THUPhu)/homepage/index.html">
                 <img src="./Logo (attempt 1).png">
               </a>
         
-            <a class="a-button" href="http://127.0.0.1:5501/trang_chinh/index.html">
-                <h2 class="Nav-Options" id="Home-Button">Trang chủ</h2>
-            </a>
+              <a class="a-button" href="http://127.0.0.1:5501/trang_chinh/index.html">
+                <h2 class="Nav-Options" id="Home-Button">Trang chính</h2>
+              </a>
             <a class="a-button" href="./nhap-so-lieu.html"><h2 class="Nav-Options">Nhập số liệu</h2></a>
         
             <a class="Acc-Options" id="SignOut-Button">Đăng xuất</a>
           </header>
           <!-- End of Header -->
 
-          <main>
-            <input type="text" id="overview-text">
-            <input type="text" id="total-text">
-            <input type="text" id="users-text">
-            <button id="update">Update</button>
+          <main class="Main">
+                <div class="container">    
+                  <form>    
+                    <div class="row">    
+                      <div class="col-25">    
+                      </div>    
+                      <div class="col-75">    
+                        <input type="text" id="overview1-text" placeholder="Nhập lợi nhuận...">
+                        <input type="text" id="overview2-text" placeholder="Nhập lỗ...">
+                        <input type="text" id="total-text" placeholder="Nhập tất cả hoa...">
+                        <input type="text" id="users-text" placeholder="Nhập số nhân viên...">
+                      </div>    
+                    </div>    
+                    <div id="sumit-button" class="row">    
+                        <button id="update">Cập nhật</button>
+                    </div>    
+                  </form>    
+                </div>    
           </main>
 
             <!-- Footer -->
             <footer class="footer">
                 <div class="footer__addr">
                   <h1 class="footer__logo">Quan Ly Hoa</h1>
-                      
-                    <a class="footer__btn" href="mailto:trantuananh21807@gmail.com">Email cho chúng tôi</a>
-                  </address>
                 </div>
                 
                 <ul class="footer__nav">
@@ -102,6 +112,6 @@
                 
               </footer>
               <!-- End of Footer -->
-    <script type="module" src="./index.js"></script>
+    <script type="module" src="./nhap-so-lieu.js"></script>
 </body>
 </html>

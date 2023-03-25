@@ -1,6 +1,8 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-analytics.js";
 import { getAuth, signOut } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-auth.js";
+import {getFirestore,} from "https://www.gstatic.com/firebasejs/9.17.2/firebase-firestore.js"; 
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyAYm6OsGaiE0x8cAAiaX6D_2LLyl7waI64",
@@ -14,47 +16,7 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
-
-import { doc, addDoc, getFirestore, collection, updateDoc, getDocs} from "https://www.gstatic.com/firebasejs/9.17.2/firebase-firestore.js"; 
 const db = getFirestore(app)
-
-const update = async() =>{
-    const users = document.getElementById('users-text').value;
-    const total = document.getElementById('total-text').value;
-    const overview = document.getElementById('overview-text').value;
-
-  await updateDoc(doc(db, 'Overview', 'overview'), {
-      allUsers: users,
-  }) 
-  await updateDoc(doc(db, 'Overview', 'overview'), {
-    totalSpent: total,
-})
-await updateDoc(doc(db, 'Overview', 'overview'), {
-    allFlowers: overview,
-})
-}
-document.getElementById('update').addEventListener('click', update);
-
-const querySnapshot = await getDocs(collection(db, "Overview"));
-var innerstring1 = ''
-var innerstring2 = ''
-var innerstring3 = ''
-
-querySnapshot.forEach((doc) => {
-    innerstring1 = `
-    <p  class="number-box" id="overview">${doc.data().allFlowers}</p>
-    `;
-    innerstring2 = `
-    <p class="number-box" id="total">${doc.data().totalSpent}</p>
-    `;
-    innerstring3 = `
-    <p class="number-box" id="users">${doc.data().allUsers}</p>
-    `;
-});
-document.getElementById('innerstring1').innerHTML = innerstring1;
-document.getElementById('innerstring2').innerHTML = innerstring2;
-document.getElementById('innerstring3').innerHTML = innerstring3;
-
 
 const signout = async() =>{
     const auth = getAuth();
@@ -66,3 +28,7 @@ const signout = async() =>{
     });
 }
 document.getElementById('SignOut-Button').addEventListener('click', signout)
+
+document.getElementById("innerstring1").innerHTML = localStorage.getItem("tong so hoa");
+document.getElementById("innerstring2").innerHTML = localStorage.getItem("overview");
+document.getElementById("innerstring3").innerHTML = localStorage.getItem("nhan vien");

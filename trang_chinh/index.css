@@ -236,3 +236,38 @@
     }
   }
   /* End of Footer */
+
+
+  /* Nhap so lieu */
+  input[type=text], select, textarea {    
+    width: 100%;    
+    padding: 12px;    
+    border: 1px solid rgb(70, 68, 68);    
+    border-radius: 4px;    
+    resize: vertical;    
+  }    
+      
+  label {    
+    padding: 12px 12px 12px 0;    
+    display: inline-block;    
+  }    
+      
+  .container {    
+    border-radius: 5px;    
+    padding: 20px;    
+  }    
+    
+  .col-75 {    
+    width: 50%;    
+    margin-top: 6px;    
+  }  
+#update{
+  padding: 0.3%;
+  background: none; 
+  border-radius: 2px #888888;
+  margin-top: 1%;
+  }
+#update:hover{
+  color: #eb4034;
+  cursor: pointer;
+    }

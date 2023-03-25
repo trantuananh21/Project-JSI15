@@ -134,6 +134,9 @@ input::placeholder {
   color: #030203;
   letter-spacing: 0.1rem;
 }
+#submit{
+  margin-left: 70%;
+}
 .user_options-forms .forms_field:not(:last-of-type) {
   margin-bottom: 20px;
 }
